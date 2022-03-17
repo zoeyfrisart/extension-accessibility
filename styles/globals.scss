@@ -1,0 +1,135 @@
+@use 'sass:color';
+
+:root {
+  // Spacing Tokens
+  --spacing-3-xs: 0;
+  --spacing-2-xs: 2px;
+  --spacing-1-xs: 4px;
+  --spacing-s: 6px;
+  --spacing-m: 8px;
+  --spacing-l: 12px;
+  --spacing-1-xl: 16px;
+  --spacing-2-xl: 24px;
+  --spacing-3-xl: 32px;
+  --spacing-4-xl: 40px;
+  --spacing-5-xl: 56px;
+  --spacing-6-xl: 80px;
+  --spacing-7-xl: 104px;
+
+  // UI Size Tokens
+  --ui-size-4-xs: 12px;
+  --ui-size-3-xs: 16px;
+  --ui-size-2-xs: 20px;
+  --ui-size-1-xs: 24px;
+  --ui-size-s: 32px;
+  --ui-size-m: 48px;
+  --ui-size-l: 56px;
+  --ui-size-1-xl: 64px;
+  --ui-size-2-xl: 80px;
+  --ui-size-3-xl: 96px;
+  --ui-size-4-xl: 112px;
+  --ui-size-5-xl: 152px;
+
+  // Radii
+  --radius-none: 0;
+  --radius-1-xs: 2px;
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
+  --radius-1-xl: 8px;
+  --radius-2-xl: 16px;
+  --radius-3-xl: 24px;
+  --radius-4-xl: 32px;
+  --radius-full: 50%;
+}
+
+@function to-rgb($hex) {
+  @return color.red($hex), color.green($hex), color.blue($hex);
+}
+
+$colors: (
+  // Color 1
+  --color-100: #f9fbfe,
+  --color-200: #eaf2fe,
+  --color-250: #d9e8fe,
+  --color-300: #93beff,
+  --color-400: #5a9bff,
+  --color-500: #0a6bff,
+  --color-600: #065dd8,
+  --color-700: #044db0,
+  --color-800: #013c88,
+  --color-900: #002c61,
+  // Color 2
+  --color2-100: #f9fdfe,
+  --color2-200: #e6f8fd,
+  --color2-250: #cdf2fc,
+  --color2-300: #a2e9fc,
+  --color2-400: #67deff,
+  --color2-500: #2bd5ff,
+  --color2-600: #1db8de,
+  --color2-700: #0f93b8,
+  --color2-800: #016e8f,
+  --color2-900: #014b61,
+  // Color 3
+  --color3-100: #f8f9fb,
+  --color3-200: #c8d2e1,
+  --color3-250: #a4b1c4,
+  --color3-300: #8290a5,
+  --color3-400: #68778d,
+  --color3-500: #56667d,
+  --color3-600: #47556a,
+  --color3-700: #394558,
+  --color3-800: #2b3545,
+  --color3-900: #1e2632,
+  // Error
+  --error-100: #fff7f8,
+  --error-300: #ffa0ac,
+  --error-500: #e8374c,
+  --error-700: #720b18,
+  --error-900: #410008,
+  // Success
+  --success-100: #fbfff7,
+  --success-300: #d0ffa0,
+  --success-500: #8fda44,
+  --success-700: #438006,
+  --success-900: #204100,
+  // Misc
+  --white-000: #fff,
+  --black-000: #000
+);
+
+:root {
+  // Colors
+  @each $var, $color in $colors {
+    #{$var}: #{$color};
+    #{$var}-rgb: #{to-rgb($color)};
+  }
+
+  /*
+  USAGE:
+
+  Regular:
+  `color: var(--success-600),`
+
+  With opacity:
+  `color: rgba(var(--success-600-rgb), 0.15),`
+
+  */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

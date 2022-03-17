@@ -1,0 +1,20 @@
+.container {
+  padding: 0 2rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
