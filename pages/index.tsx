@@ -83,16 +83,17 @@ const Home: NextPage = () => {
               Geef een uitleg over het probleem
               <textarea name="description" rows={5} required />
             </label>
-                <div className={styles.col}>
-                  <p id="video-title">Luister de scherm opname terug</p>
-                  <video
-                    controls width="250"
-                    poster='/thumbnail.png'
-                    aria-describedby='video-title'
-                  >
-                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                      type="video/mp4" />
-
+            <div className={styles.col}>
+              <p id="video-title">Luister de scherm opname terug</p>
+              <video
+                controls width="250"
+                poster='/thumbnail.png'
+                aria-describedby='video-title'
+              >
+                <source
+                  src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                  type="video/mp4"
+                />
                Sorry, your browser {'doesn\'t'} support embedded videos.
               </video>
             </div>
