@@ -213,7 +213,7 @@ const Home: NextPage = () => {
         active={active}
       >
         <h1>Report geschiedenis</h1>
-        <p>Deze pagina is nog niet uitgewerkt.</p>
+        <p>Deze pagina is buiten de scope van dit project.</p>
       </Tab>
     </div>
   )
